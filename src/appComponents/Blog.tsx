@@ -47,7 +47,7 @@ export function Blog() {
   ];
 
   return (
-    <div className="bg-gray-100 dark:bg-black text-black dark:text-gray-200 min-h-screen py-12 px-6">
+    <div className="bg-white dark:bg-black text-black dark:text-gray-200 min-h-screen py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-6">Blog</h1>
         <p className="text-center mb-12 text-lg">

@@ -34,10 +34,21 @@ export const Footer = () => {
           </ul>
           <h3 className="text-lg font-bold my-4">Company</h3>
           <ul className="space-y-2">
-            <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Code of Conduct</li>
-            <li>Refunds</li>
+            <li>
+              <a href="/terms-and-conditions">Terms and Conditions </a>
+            </li>
+
+            <li>
+              <a href="/terms-and-conditions#privacy">Privacy Policy </a>
+            </li>
+
+            <li>
+              <a href="/terms-and-conditions#conduct">Code of Conduct </a>
+            </li>
+
+            <li>
+              <a href="/terms-and-conditions#refunds">Refunds </a>
+            </li>
           </ul>
         </div>
 

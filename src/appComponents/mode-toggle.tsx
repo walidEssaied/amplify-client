@@ -36,17 +36,17 @@ export function ModeToggle() {
           }}
         >
           {/* Sun Icon */}
-          <Sun
+          {/* <Sun
             className={`h-[1.2rem] w-[1.2rem] absolute left-1 top-1 transition-opacity duration-300 ${
               isDarkMode ? "opacity-0" : "opacity-100"
             }`}
-          />
+          /> */}
           {/* Moon Icon */}
-          <Moon
+          {/* <Moon
             className={`h-[1.2rem] w-[1.2rem] absolute right-1 top-1 transition-opacity duration-300 ${
               isDarkMode ? "opacity-100" : "opacity-0"
             }`}
-          />
+          /> */}
         </span>
       </label>
     </div>

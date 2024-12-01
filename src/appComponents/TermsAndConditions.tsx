@@ -33,13 +33,13 @@ const NAV_ITEMS = [
 ];
 
 export const NavigationMenu = () => (
-  <nav className="sticky top-0 bg-black/80 backdrop-blur-sm py-4 my-8">
+  <nav className="sticky top-0 dark:bg-black/80 bg-white backdrop-blur-sm py-4 my-8">
     <ul className="flex space-x-4 overflow-x-auto py-2">
       {NAV_ITEMS.map((item) => (
         <li key={item.id}>
           <a
             href={`#${item.id}`}
-            className="text-white hover:text-gray-300 transition-colors border p-2 rounded-xl font-medium text-lg"
+            className="dark:text-white text-black hover:text-gray-300 transition-colors border p-2 rounded-xl font-medium text-lg"
           >
             {item.label}
           </a>
@@ -88,7 +88,7 @@ import { HomeCallToAction } from "./HomeCallToAction";
 
 export default function TermsAndConditions() {
   return (
-    <div className="min-h-screen bg-black text-white p-6 relative overflow-hidden">
+    <div className="min-h-screen dark:bg-black bg-white  dark:text-white text-black p-6 relative overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto space-y-10 flex flex-col">
         <NavigationMenu />
 
@@ -99,7 +99,7 @@ export default function TermsAndConditions() {
             <>
               <div>
                 <h3 className="font-bold text-xl mb-2">Services Provided:</h3>
-                <p className="text-white font-medium">
+                <p className="dark:text-white text-black font-medium">
                   Amplify offers a range of digital content creation services,
                   including 3D product visualization, exhibition design,
                   architectural rendering, product animation, and advertising.
@@ -111,7 +111,7 @@ export default function TermsAndConditions() {
 
               <div>
                 <h3 className="font-bold text-xl mb-2">Payment Terms:</h3>
-                <ul className="list-disc pl-6 text-white font-medium">
+                <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                   <li>
                     Payment is required either upfront or based on an agreed
                     schedule (e.g., 50% deposit before work begins, balance upon
@@ -131,7 +131,7 @@ export default function TermsAndConditions() {
                 <h3 className="font-bold text-xl mb-2">
                   Revisions & Modifications:
                 </h3>
-                <ul className="list-disc pl-6 text-white font-medium">
+                <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                   <li>
                     Minor Revisions: Small changes (e.g., lighting, color
                     adjustments) are included in the scope of work.
@@ -148,7 +148,7 @@ export default function TermsAndConditions() {
                 <h3 className="font-bold text-xl mb-2">
                   Intellectual Property & Usage Rights:
                 </h3>
-                <ul className="list-disc pl-6 text-white font-medium">
+                <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                   <li>
                     All content remains the property of Amplify until full
                     payment is received. Once paid, the client is granted a
@@ -168,7 +168,7 @@ export default function TermsAndConditions() {
                 <h3 className="font-bold text-xl mb-2">
                   Client Responsibilities:
                 </h3>
-                <ul className="list-disc pl-6 text-white font-medium">
+                <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                   <li>
                     Clients must provide all necessary materials and resources
                     for project completion.
@@ -187,7 +187,7 @@ export default function TermsAndConditions() {
                 <h3 className="font-bold text-xl mb-2">
                   Liability & Disclaimers:
                 </h3>
-                <ul className="list-disc pl-6 text-white font-medium">
+                <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                   <li>
                     Amplify is not liable for delays caused by factors outside
                     its control, such as client delays or third-party issues.
@@ -209,7 +209,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Data Collection:
                       </h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Amplify collects and uses client data (contact
                         information, project briefs) solely for the purpose of
                         providing services and maintaining effective
@@ -220,7 +220,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Data Protection:
                       </h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Client data is treated as confidential and will not be
                         shared with third parties unless necessary for service
                         delivery or required by law.
@@ -230,7 +230,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Third-Party Services:
                       </h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Amplify may use third-party service providers for tasks
                         like payment processing or website hosting. These
                         services have their own privacy policies, and Amplify is
@@ -239,7 +239,7 @@ export default function TermsAndConditions() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2">Client Rights:</h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Clients have the right to access, modify, or request the
                         deletion of their data at any time by contacting Amplify
                         directly.
@@ -260,7 +260,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Clients are expected to:
                       </h3>
-                      <ul className="list-disc pl-6 text-white font-medium">
+                      <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                         <li>
                           Provide accurate and complete information required for
                           project completion.
@@ -278,7 +278,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Amplify's Commitment:
                       </h3>
-                      <ul className="list-disc pl-6 text-white font-medium">
+                      <ul className="list-disc pl-6 dark:text-white text-black font-medium">
                         <li>
                           Ensure professional conduct during all interactions.
                         </li>
@@ -294,7 +294,7 @@ export default function TermsAndConditions() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2">Misconduct:</h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Any form of abusive, discriminatory, or unlawful
                         behavior toward Amplify staff will not be tolerated and
                         may result in the termination of the project without a
@@ -314,7 +314,7 @@ export default function TermsAndConditions() {
                   <>
                     <div>
                       <h3 className="font-bold text-xl mb-2">Cancellation:</h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Clients may cancel a project before work begins and
                         receive a full refund. If the project has already
                         started, partial refunds may be issued based on the
@@ -325,7 +325,7 @@ export default function TermsAndConditions() {
                       <h3 className="font-bold text-xl mb-2">
                         Non-Refundable Cases:
                       </h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         No refunds are available once the project is
                         substantially completed or fully delivered. Amplify
                         reserves the right to refuse refunds if the client fails
@@ -335,7 +335,7 @@ export default function TermsAndConditions() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2">Disputes:</h3>
-                      <p className="text-white font-medium">
+                      <p className="dark:text-white text-black font-medium">
                         Amplify aims to resolve any client concerns or disputes.
                         If the client is unsatisfied with the final product,
                         Amplify will work to address minor adjustments within
