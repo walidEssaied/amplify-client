@@ -151,26 +151,7 @@ export const AboutPage: FC = () => {
   );
 };
 
-interface ProfileCardProps {
-  name: string;
-}
 
-function ProfileCard({ name }: ProfileCardProps) {
-  return (
-    <div className="rounded-2xl w-full max-w-[280px] bg-white shadow-lg border border-white overflow-hidden">
-      <div className="bg-black p-6 text-center">
-        <h3 className="text-white text-lg font-medium">{name}</h3>
-      </div>
-      <div className="p-8 flex justify-center relative">
-        <img
-          src={Avatar}
-          alt={name}
-          className="rounded-full w-24 h-24 object-cover"
-        />
-      </div>
-    </div>
-  );
-}
 
 function ProfileGrid() {
   const profiles = [

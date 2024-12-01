@@ -4,7 +4,6 @@ import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import BackgroundContactLight from "../assets/contact_light.webp";
 import ContactBanner from "../assets/images/CONTACT_BANNER.png";
-import { useTheme } from "./theme-provider";
 
 // Zod validation schema
 const contactFormSchema = z.object({
@@ -83,7 +82,10 @@ export function Contact() {
               we'll get back to you shortly.
             </p>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="space-y-3 sm:space-y-4"
+          >
             <div>
               <label className="block text-xs sm:text-sm font-medium mb-1 text-gray-300">
                 Name
