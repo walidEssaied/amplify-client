@@ -5,16 +5,19 @@ import { featuredOffresData } from "./ServicesData";
 
 export const Services = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-white dark:bg-black">
       <section className="container py-24 sm:py-32">
-        <div className="p-6 flex flex-col items-center justify-center space-y-6">
+        <div
+          className="p-6 flex flex-col items-center justify-center space-y-6"
+          data-aos="fade-up"
+        >
           <div className="p-2 border rounded-xl font-bold text-xl">
             Services
           </div>
-          <h5 className="text-xl md:text-4xl text-center leading-relaxed font-bold text-white w-7/12">
+          <h5 className="text-xl md:text-4xl text-center leading-relaxed font-bold dark:text-white w-7/12">
             We Offer A Variety Of Services That Will Guide Your Brand To Success{" "}
           </h5>
-          <p className="my-2 text-gray-300 text-center">
+          <p className="my-2 dark:text-gray-300 text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           </p>
@@ -28,7 +31,7 @@ export const Services = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center mt-10 px-6 lg:px-16 gap-6">
           <div className="col-span-1 lg:col-span-1">
-            <h4 className="text-6xl lg:text-9xl font-extrabold leading-tight text-white">
+            <h4 className="text-6xl lg:text-9xl font-extrabold leading-tight dark:text-white">
               New
               <br className="hidden lg:block" />
               Offre

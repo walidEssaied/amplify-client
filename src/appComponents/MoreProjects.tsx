@@ -57,7 +57,7 @@ export const MoreProjects: React.FC = (): JSX.Element => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-black relative overflow-hidden">
       <div className="absolute bottom-[150px] left-0 right-0 z-0 opacity-100 blur-sm">
         <img
           src={over300ProjectsImage}
@@ -67,11 +67,11 @@ export const MoreProjects: React.FC = (): JSX.Element => {
       </div>
       <div className="relative z-10 container mx-auto px-4">
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-center text-center mb-12">
-          <h4 className="text-white text-4xl font-bold mb-2">
+        <div className="flex flex-col items-center justify-center text-center mb-12" data-aos="fade-up">
+          <h4 className="text-black dark:text-white text-4xl font-bold mb-2">
             300+ Projects Finished
           </h4>
-          <p className="text-gray-400 max-w-3xl">
+          <p className="text-gray-600 dark:text-gray-400 max-w-3xl">
             Join a global network of freelancers who have achieved success
             through our courses. Collaborate, seek advice, and continue growing
             alongside peers who understand your journey.
@@ -80,16 +80,16 @@ export const MoreProjects: React.FC = (): JSX.Element => {
 
         <div className="relative">
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-[#D9D9D9] hover:bg-white/30 md:w-[80px] md:h-[80px] rounded-full p-2 backdrop-blur-sm max-md:hidden flex flex-col items-center justify-center"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-[#D9D9D9] hover:bg-white/30 dark:bg-[#333] dark:hover:bg-white/30 md:w-[80px] md:h-[80px] rounded-full p-2 backdrop-blur-sm max-md:hidden flex flex-col items-center justify-center"
             onClick={() => swiperInstance?.slidePrev()}
           >
-            <ChevronLeft className="text-black" size={"medium"} />
+            <ChevronLeft className="text-black dark:text-white" size={"medium"} />
           </button>
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-[#D9D9D9] hover:bg-white/30 md:w-[80px] md:h-[80px] rounded-full p-2 backdrop-blur-sm max-md:hidden flex flex-col items-center justify-center"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-[#D9D9D9] hover:bg-white/30 dark:bg-[#333] dark:hover:bg-white/30 md:w-[80px] md:h-[80px] rounded-full p-2 backdrop-blur-sm max-md:hidden flex flex-col items-center justify-center"
             onClick={() => swiperInstance?.slideNext()}
           >
-            <ChevronRight className="text-black" size={"medium"} />
+            <ChevronRight className="text-black dark:text-white" size={"medium"} />
           </button>
 
           <Swiper
@@ -102,9 +102,8 @@ export const MoreProjects: React.FC = (): JSX.Element => {
           >
             {projectsData.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="bg-[#212121] backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-start md:flex-row p-6 md:h-[400px] w-full border-22 border-gray-600">
+                <div className="bg-gray-200 dark:bg-[#1f1f1f] backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-start md:flex-row p-6 md:h-[400px] w-full border-22 border-gray-600 dark:border-gray-700">
                   <div className="md:w-2/3">
-                    {" "}
                     <img
                       src={project.image}
                       alt={project.project_name}
@@ -112,11 +111,11 @@ export const MoreProjects: React.FC = (): JSX.Element => {
                     />
                   </div>
 
-                  <div className="w-full flex flex-col justify-center  items-start text-left md:p-12 space-y-4">
-                    <p className="text-gray-300 text-base leading-relaxed">
+                  <div className="w-full flex flex-col justify-center items-start text-left md:p-12 space-y-4">
+                    <p className="text-gray-900 dark:text-gray-300 text-base leading-relaxed">
                       {project.description}
                     </p>
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
                       {project.project_name}
                     </h3>
                   </div>

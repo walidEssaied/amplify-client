@@ -38,13 +38,18 @@ export const Sponsors = () => {
   return (
     <section
       id="sponsors"
-      className="sm:mt-0 md:mt-0 py-16 flex flex-col items-center justify-center space-y-6 bg-black"
+      className="sm:mt-0 md:mt-0 py-16 flex flex-col items-center justify-center space-y-6 bg-white dark:bg-black transition-colors duration-300"
     >
-      {/* Section Title */}
-      <span className="text-center text-red-500 font-semibold">
+      <span
+        className="text-center text-red-500 font-semibold"
+        data-aos="fade-up"
+      >
         Our Clients
       </span>
-      <h2 className="text-center text-md lg:text-4xl font-bold text-white">
+      <h2
+        className="text-center text-md lg:text-4xl font-bold text-black dark:text-white transition-colors duration-300"
+        data-aos="fade-up"
+      >
         Featured Collaborations
       </h2>
 
@@ -52,26 +57,31 @@ export const Sponsors = () => {
         <Swiper
           autoplay
           spaceBetween={24}
-          slidesPerView={5}
+          slidesPerView={4}
           breakpoints={{
-            640: {
+            768: {
               slidesPerView: 3,
             },
-            768: {
-              slidesPerView: 5,
-            },
             1024: {
-              slidesPerView: 7,
+              slidesPerView: 6,
+            },
+            300: {
+              slidesPerView: 2,
+            },
+            200: {
+              slidesPerView: 1,
             },
           }}
           className="flex items-center"
         >
-          {sponsors.map(({ name }: SponsorProps) => (
+          {sponsors.map(({ name }) => (
             <SwiperSlide
               key={name}
-              className="flex-shrink-0 flex items-center gap-2 justify-center text-muted-foreground/60 h-[76px] w-[179px] bg-red-50 shadow-md p-4"
+              className=" flex-shrink-0 flex items-center gap-2 justify-center h-[76px] w-[179px] bg-red-50 dark:bg-gray-800 shadow-md p-4 rounded-lg"
             >
-              <h3 className="text-xl font-bold">{name}</h3>
+              <h3 className="text-xl font-bold text-black dark:text-white transition-colors duration-300">
+                {name}
+              </h3>
             </SwiperSlide>
           ))}
         </Swiper>

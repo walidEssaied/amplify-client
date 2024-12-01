@@ -72,7 +72,7 @@ const sectionsData = [
 
 export const WhyChooseUs: FC = (): JSX.Element => {
   return (
-    <section className="relative py-24 bg-black overflow-hidden">
+    <section className="relative py-24 bg-white dark:bg-black overflow-hidden">
       <img src={AccentImage1} alt="Accent" className="absolute bottom-0 left-0" />
       <img src={AccentImage7} alt="Accent" className="absolute bottom-0 right-0" />
       <img src={AccentImage8} alt="Accent" className="absolute bottom-40 right-0" />
@@ -82,53 +82,58 @@ export const WhyChooseUs: FC = (): JSX.Element => {
         className="absolute -left-80 w-1/3 bottom-40"
       />
       <img src={AccentImage3} alt="Accent" className="absolute left-0 top-3 " />
-      <div className="flex flex-col items-center justify-center text-center mb-8">
+      <div className="flex flex-col items-center justify-center text-center mb-8" data-aos="fade-up">
         <span className="text-red-500 font-bold text-lg">
           The Amplify Advantage
         </span>
-        <h4 className="text-white text-4xl font-bold mb-2">
+        <h4 className="text-black dark:text-white text-4xl font-bold mb-2" >
           Why work with us?
         </h4>
-        <p className="text-gray-400 max-w-md">
+        <p className="text-black dark:text-gray-400 max-w-md" >
           5 reasons to take your brand to the next level with Amplify
         </p>
       </div>
 
-      <div className="container grid grid-cols-1 gap-12 pt-14">
+      <div className="container mx-auto px-4 py-8">
+      <div className="space-y-16 sm:space-y-24">
         {sectionsData.map((section, index) => (
           <div
             key={index}
-            className={`flex flex-col md:flex-row ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center gap-6 h-[500px]`}
+            className={`flex flex-col ${
+              index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+            } items-center gap-8 lg:gap-12`}
+             data-aos="fade-up"
           >
-            <div className="flex flex-col items-start text-left md:w-1/2 px-6">
+            <div className="flex flex-col items-start text-left w-full lg:w-1/2">
               <img
                 src={section.icon}
-                alt={section.title}
-                className="w-10 h-10 mb-4  p-2  border-white border  rounded-lg"
+                alt=""
+                className="w-10 h-10 mb-4 p-2 border border-black bg-black dark:bg-transparent dark:border-white rounded-lg"
               />
-              <h5 className="text-white text-2xl font-bold mb-2">
+              <h2 className="text-black dark:text-white text-2xl sm:text-3xl font-bold mb-4">
                 {section.title}
-              </h5>
-              <p className="text-gray-400">{section.description}</p>
+              </h2>
+              <p className="text-gray-700 dark:text-gray-400 text-base sm:text-lg">
+                {section.description}
+              </p>
             </div>
 
-            <div className="relative md:w-1/2 flex justify-center items-center">
+            <div className="relative w-full lg:w-1/2 aspect-square flex justify-center items-center mt-8 lg:mt-0">
               <img
                 src={section.accentImage}
-                alt="Accent"
-                className={section.accentClassName}
+                alt=""
+                className={`absolute ${section.accentClassName}`}
               />
               <img
                 src={section.image}
                 alt={section.title}
-                className={`w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover z-10 ${section?.imageClass}`}
+                className={`w-4/5 h-4/5 object-cover z-10 ${section.imageClass || ''}`}
               />
             </div>
           </div>
         ))}
       </div>
+    </div>
     </section>
   );
 };

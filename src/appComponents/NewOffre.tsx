@@ -4,10 +4,13 @@ import { NewOffreCard } from "./NewOffreCard";
 
 export const NewOffre: FC = (): JSX.Element => {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
-      <div className="flex flex-col items-center justify-center text-center mb-12 relative z-10">
+    <section className="py-24 bg-white dark:bg-black relative overflow-hidden">
+      <div
+        className="flex flex-col items-center justify-center text-center mb-12 relative z-10"
+        data-aos="fade-up"
+      >
         <span className="text-red-500 font-bold text-lg">New Offers</span>
-        <h4 className="text-white text-4xl font-bold mb-2">
+        <h4 className="text-black dark:text-white text-4xl font-bold mb-2">
           Architectural Visualization
         </h4>
       </div>
@@ -21,7 +24,6 @@ export const NewOffre: FC = (): JSX.Element => {
         src={Abstract25}
         alt="Abstract design"
         className="hidden lg:block absolute -bottom-14 right-14 w-[400px] opacity-100 -rotate-90 z-0"
-
       />
 
       <div className="container mx-auto relative z-10">

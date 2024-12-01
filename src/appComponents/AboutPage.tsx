@@ -10,22 +10,22 @@ import { HomeCallToAction } from "./HomeCallToAction";
 
 export const AboutPage: FC = () => {
   return (
-    <div className="bg-black min-h-screen">
-      <section className="container mx-auto py-24 px-4">
+    <div className="bg-white dark:bg-black min-h-screen">
+      <section className="container mx-auto py-24 px-4" data-aos="fade-up">
         <div className="flex flex-col items-center justify-center space-y-8">
           <div className="flex items-center justify-center gap-4">
-            <div className="p-2 border rounded-xl font-bold text-md md:text-xl text-white">
+            <div className="p-2 border rounded-xl font-bold text-md md:text-lg text-black dark:text-white">
               ABOUT US
             </div>
-            <div className="p-2 border rounded-xl font-bold text-md md:text-xl text-white">
+            <div className="p-2 border rounded-xl font-bold text-md md:text-lg text-black dark:text-white">
               Values
             </div>
           </div>
-          <h5 className="text-4xl text-center leading-relaxed font-bold text-white max-w-4xl">
+          <h5 className="text-4xl text-center leading-relaxed font-bold text-black dark:text-white max-w-4xl">
             Creating The Best Social Media Visuals For Beauty And Wellness
             Brands
           </h5>
-          <p className="text-gray-300 text-center max-w-2xl">
+          <p className="dark:text-gray-300 text-gray-700 text-center max-w-2xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -36,10 +36,20 @@ export const AboutPage: FC = () => {
         <div className="relative w-full max-w-4xl mx-auto">
           <div className="relative">
             <div
-              className="absolute -inset-8 bg-black rounded-[40px] z-0 pointer-events-none"
+              className="absolute -inset-8 bg-black rounded-[40px] z-0 pointer-events-none hidden dark:block"
               style={{
                 boxShadow: `
                   0 0 40px 20px rgba(0,0,0,0.7) inset,
+                  0 0 100px 20px rgba(255,255,255,0.1)
+                `,
+                filter: "blur(20px)",
+              }}
+            ></div>
+            <div
+              className="absolute -inset-8 bg-white rounded-[40px] z-0 pointer-events-none block dark:hidden"
+              style={{
+                boxShadow: `
+                  0 0 40px 20px rgba(0, 0, 0, 0.7) inset,
                   0 0 100px 20px rgba(255,255,255,0.1)
                 `,
                 filter: "blur(20px)",
@@ -58,10 +68,18 @@ export const AboutPage: FC = () => {
               <img src={YoutubeIcon} alt="Youtube Icon" className="w-20 h-20" />
             </div>
             <div className="absolute top-1/4 left-0 transform -translate-x-1/2 z-10 md:block hidden">
-              <img src={Line27} alt="Decorative Line" className="w-40 h-80" />
+              <img
+                src={Line27}
+                alt="Decorative Line"
+                className="w-40 h-80 hidden dark:block"
+              />
             </div>
             <div className="absolute -bottom-10 -right-52 transform -translate-x-1/2 z-10 rotate-180 hidden md:block">
-              <img src={Line28} alt="Decorative Line" className="w-80 h-40" />
+              <img
+                src={Line28}
+                alt="Decorative Line"
+                className="w-80 h-40 hidden dark:block"
+              />
             </div>
           </div>
         </div>
@@ -74,9 +92,14 @@ export const AboutPage: FC = () => {
         <div className="absolute top-0 right-0 hidden md:block">
           <img src={Abstract14} alt="Abstract" className="w-[700px]" />
         </div>
-        <div className="flex flex-col items-center justify-center text-center space-y-4 my-12 mt-48">
+        <div
+          className="flex flex-col items-center justify-center text-center space-y-4 my-12 mt-48"
+          data-aos="fade-up"
+        >
           <span className="text-red-600 font-bold text-lg">100% Remote </span>
-          <h4 className="text-white text-4xl font-bold">Meet Our Team</h4>
+          <h4 className="dark:text-white text-black text-4xl font-bold">
+            Meet Our Team
+          </h4>
         </div>
         <div className="relative overflow-hidden">
           <ProfileGrid />
@@ -84,16 +107,19 @@ export const AboutPage: FC = () => {
       </section>
 
       <section className="container mx-auto py-16 px-4">
-        <div className="flex flex-col items-center justify-center text-center space-y-4 mb-12">
+        <div
+          className="flex flex-col items-center justify-center text-center space-y-4 mb-12"
+          data-aos="fade-up"
+        >
           <span className="text-red-600 font-bold text-lg">
             Founded By Passion
           </span>
-          <h4 className="text-white text-4xl font-bold">
+          <h4 className="text-black dark:text-white text-4xl font-bold">
             Our Backstory & Values
           </h4>
         </div>
         <div className="space-y-9 mx-auto leading-loose">
-          <p className="text-center text-white text-lg leading-loose font-medium">
+          <p className="text-center text-black dark:text-white text-lg leading-loose font-medium">
             Amplify was born from a shared passion for pushing creative
             boundaries and a belief that stunning visuals should be accessible
             to all. Founded in 2023 by a group of ambitious college students
@@ -102,7 +128,7 @@ export const AboutPage: FC = () => {
             culmination of their combined talents and shared vision
           </p>
           <hr className="border-2 w-11/12" />
-          <p className="text-center text-white text-lg leading-loose font-medium">
+          <p className="text-center text-black dark:text-white text-lg leading-loose font-medium">
             We are a creative studio on a mission: to empower small and
             medium-sized businesses with the impactful visuals they need to
             thrive in a competitive world. We believe that stunning visuals
@@ -111,7 +137,7 @@ export const AboutPage: FC = () => {
             technology, making high-end 3D visualization accessible to all.
           </p>
           <hr className="border-2 my-10 mx-20" />
-          <p className="text-center text-white text-lg leading-loose font-medium">
+          <p className="text-center text-black dark:text-white text-lg leading-loose font-medium">
             What sets Amplify apart is our unwavering commitment to quality and
             our dedication to pushing creative boundaries. We don't just create
             visuals; we craft experiences. We believe in the power of visual
@@ -155,9 +181,23 @@ function ProfileGrid() {
 
   return (
     <div className="py-8 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto relative">
+      <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
         {profiles.map((profile) => (
-          <ProfileCard key={profile.name} name={profile.name} />
+          <div
+            key={profile.name}
+            className="rounded-2xl w-[280px] bg-white shadow-lg border border-white overflow-hidden"
+          >
+            <div className="bg-black p-6 text-center">
+              <h3 className="text-white text-lg font-medium">{profile.name}</h3>
+            </div>
+            <div className="p-8 flex justify-center relative">
+              <img
+                src={Avatar}
+                alt={profile.name}
+                className="rounded-full w-24 h-24 object-cover"
+              />
+            </div>
+          </div>
         ))}
       </div>
     </div>

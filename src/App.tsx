@@ -11,8 +11,19 @@ import { AboutPage } from "./appComponents/AboutPage";
 import { Home } from "./appComponents/Home";
 import { ServicePage } from "./appComponents/ServicePage";
 import TermsAndConditions from "./appComponents/TermsAndConditions";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <Router>
       <Navbar />

@@ -11,8 +11,11 @@ export const HomeCallToAction: FC<{ title?: string; description?: string }> = ({
   title = "Still not convinced?",
 }): JSX.Element => {
   return (
-    <div className="bg-black py-1 overflow-hidden">
-      <section className="relative container py-20 mt-40 ">
+    <div
+      className="py-1 overflow-hidden bg-white dark:bg-black"
+      data-aos="fade-up"
+    >
+      <section className="relative container py-20 mt-40">
         {/* Artboards positioned behind the box */}
         <img
           src={ArtBoardRight}
@@ -26,21 +29,23 @@ export const HomeCallToAction: FC<{ title?: string; description?: string }> = ({
         />
 
         {/* Box content with a higher z-index */}
-        <div className="relative z-10 bg-[#212121] rounded-lg p-10 text-center space-y-5 border border-gray-600">
+        <div className="relative z-10 bg-gray-200 dark:bg-[#333333] rounded-lg p-10 text-center space-y-5 border border-gray-600 dark:border-gray-400">
           <div className="flex items-center justify-center -space-x-4">
             <img src={Image1} alt="Team Images" />
             <img src={Image2} alt="Team Images" className="mb-10" />
             <img src={Image3} alt="Team Images" />
           </div>
-          <h3 className="font-bold text-4xl">{title}</h3>
-          <p className="">{description}</p>
+          <h3 className="font-bold text-4xl text-black dark:text-gray-100">
+            {title}
+          </h3>
+          <p className="text-black dark:text-gray-300">{description}</p>
           <Button
             variant="default"
             size={"lg"}
             style={{
               boxShadow: "0 0 10px #A2161B",
             }}
-            className="text-2xl p-8 text-white bg-[#A2161B]"
+            className="text-2xl p-8 text-white bg-[#A2161B] hover:bg-[#D95C55] dark:bg-[#A2161B] dark:hover:bg-[#D95C55]"
           >
             Contact Us Now
           </Button>

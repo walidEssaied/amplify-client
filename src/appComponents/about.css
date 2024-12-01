@@ -1,115 +1,26 @@
-.amplify-work-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #000000;
-  overflow: hidden;
+.marquee-container {
+    position: relative;
+    overflow: hidden;
 }
 
-.amplify-work-section-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgb(9, 8, 8) 0%,
-    rgba(255, 255, 255, 0) 25%,
-    rgba(255, 255, 255, 0) 85%,
-    rgb(1, 1, 1) 100%
-  );
+.marquee-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-200%); /* Start from off-screen */
+    animation: scroll 120s linear infinite; /* Default animation */
 }
 
-.amplify-work_vertical-marquee-component {
-  display: flex;
-  flex-direction: column;
-  animation: none;
+.marquee-column.reverse {
+    animation-direction: reverse; /* Reverse the animation for downwards scrolling */
 }
 
-.amplify-work_vertical-marquee-component.active {
-  animation: loop-vertical linear infinite 100s;
-}
-
-.amplify-work_vertical-marquee-component.cc-reversed.active {
-  animation: loop-vertical-reversed linear infinite 100s;
-}
-
-@keyframes loop-vertical {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes loop-vertical-reversed {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .amplify-work_vertical-marquee-component {
-    animation-play-state: paused;
-  }
-}
-
-.amplify-work_vertical-marquee-image {
-  width: 590px;
-  height: 450px;
-  object-fit: cover;
-  display: block;
-  margin: auto;
-  border-radius: 16px;
-}
-
-.amplify-work_vertical-marquee-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.amplify-work_vertical-marquee {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (max-width: 767px) {
-  .amplify-work_vertical-marquee-image {
-    width: 100%;
-    height: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  .amplify-work_vertical-marquee-image {
-    width: 400px;
-    height: 350px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .amplify-work_vertical-marquee-image {
-    width: 590px;
-    height: 450px;
-  }
-}
-
-.amplify-work_vertical-marquee-wrapper {
-  @apply flex flex-col md:flex-row gap-4;
-}
-
-.amplify-work_vertical-marquee-image-wrapper {
-  @apply flex justify-center items-center overflow-hidden;
-}
-
-@media (max-width: 768px) {
-  .amplify-work_vertical-marquee-component.active {
-    animation-duration: 80s; /* Make animation slower for smaller devices */
-  }
+/* Animation keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateY(0%); /* Start from the visible area */
+    }
+    100% {
+        transform: translateY(-90%); /* End at the end of the list */
+    }
 }

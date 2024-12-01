@@ -2,8 +2,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
+import BackgroundContactLight from "../assets/contact_light.webp";
 import ContactBanner from "../assets/images/CONTACT_BANNER.png";
-import BackgroundContact from "../assets/images/background_contact.jpg";
+import { useTheme } from "./theme-provider";
 
 // Zod validation schema
 const contactFormSchema = z.object({
@@ -55,13 +56,13 @@ export function Contact() {
 
   return (
     <div
-      className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden p-4 sm:p-6 md:p-8"
       onMouseMove={handleMouseMove}
     >
       <div
         className="absolute inset-0 bg-black backdrop-blur-xl z-0"
         style={{
-          backgroundImage: `url(${BackgroundContact})`,
+          backgroundImage: `url(${BackgroundContactLight})`,
           backgroundPosition: "center",
           transform: `translate(${mousePosition.x / -50}px, ${
             mousePosition.y / -50
@@ -71,20 +72,20 @@ export function Contact() {
         }}
       ></div>
 
-      <div className="relative z-10 w-full max-w-7xl bg-black/70 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
-        <div className="p-8">
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-100 mb-2">
+      <div className="relative z-10 w-full max-w-7xl bg-black/70 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        <div className="p-4 sm:p-6 md:p-8">
+          <div className="text-center mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-100 mb-2">
               Contact Us
             </h1>
-            <p className="text-gray-400">
+            <p className="text-sm sm:text-base text-gray-400">
               Let's talk about your project vision. Fill out the form below, and
               we'll get back to you shortly.
             </p>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-xs sm:text-sm font-medium mb-1 text-gray-300">
                 Name
               </label>
               <Controller
@@ -93,7 +94,7 @@ export function Contact() {
                 render={({ field }) => (
                   <input
                     {...field}
-                    className="w-full p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                     placeholder="Your Name"
                   />
                 )}
@@ -106,7 +107,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-xs sm:text-sm font-medium mb-1 text-gray-300">
                 Email
               </label>
               <Controller
@@ -116,7 +117,7 @@ export function Contact() {
                   <input
                     {...field}
                     type="email"
-                    className="w-full p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                     placeholder="your@email.com"
                   />
                 )}
@@ -129,7 +130,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-xs sm:text-sm font-medium mb-1 text-gray-300">
                 Phone (Optional)
               </label>
               <Controller
@@ -139,7 +140,7 @@ export function Contact() {
                   <input
                     {...field}
                     type="tel"
-                    className="w-full p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 bg-gray-800/60 text-gray-100 border-none rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                     placeholder="+1 234 567 8900"
                   />
                 )}
@@ -152,7 +153,7 @@ export function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-xs sm:text-sm font-medium mb-1 text-gray-300">
                 Message
               </label>
               <Controller
@@ -161,7 +162,7 @@ export function Contact() {
                 render={({ field }) => (
                   <textarea
                     {...field}
-                    className="w-full p-3 bg-gray-800/60 text-gray-100 border-none rounded min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 bg-gray-800/60 text-gray-100 border-none rounded min-h-[80px] sm:min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
                     placeholder="Write your message here..."
                   />
                 )}
@@ -175,7 +176,7 @@ export function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition-colors"
+              className="w-full bg-blue-600 text-white py-2 sm:py-3 rounded hover:bg-blue-700 transition-colors text-sm sm:text-base"
             >
               Send Message
             </button>

@@ -704,7 +704,6 @@ export const HelpIcon: FC<{ className?: string }> = ({ className }) => {
 export const TikTokIcon = () => {
   return (
     <svg
-      fill="#FFF"
       width="24px"
       height="24px"
       viewBox="0 0 24 24"
